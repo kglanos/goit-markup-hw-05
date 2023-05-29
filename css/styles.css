@@ -24,6 +24,8 @@
     --button-shadow-2: #00000014;
     --button-shadow-3: #0000001A;
     --shadow-icon-footer: #FFFFFF1A;
+    --default-time: 250ms;
+    --default-time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -127,6 +129,7 @@ img {
                 letter-spacing: 0.02em;
                 color: var(--primary-text-color);
                 font-style: normal;
+                position: relative;
         }
 
 .mail,
@@ -149,9 +152,18 @@ img {
 }
 
 .nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
+.nav-link:focus {
         color: var(--logo-web-color);
+}
+
+.nav-link::after {
+        content: '';
+        width: 53px;
+        height: 4px;
+        background: var(--logo-web-color);
+        position: absolute;
+        top: 44px;
+        border-radius: 2px;
 }
 
 .contact-button {
@@ -176,6 +188,7 @@ img {
 
 .icons-contact {
         margin-right: 10px;
+        align-items: center;
 }
 
 .big-header{
@@ -355,6 +368,35 @@ img {
         padding: 0;
         margin: 0 auto;
 }
+
+.img-overlay {
+        position: relative;
+        overflow: hidden;
+}
+
+
+.img-overlay:focus,
+.img-overlay:hover {
+        transform: translateY(0);
+}
+
+.box-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        color: var(--primary-bg-color);
+        background-color: #2196F3E5;
+        width: 100%;
+        height: 100%;
+        padding: 49px 45px 49px 24px;
+        transform: translateY(100%);
+        transition-duration: 2000ms;
+        transition-timing-function: var(--default-time-function);
+}
+
 
 .card-set-item:hover,
 .card-set-item:focus{
