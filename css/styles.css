@@ -122,8 +122,7 @@ img {
         color: var(--primary-text-color);
 }
 
-.nav-link,
-.site-link {
+.nav-link {
                 text-decoration: none;
                 font-weight: 500;
                 font-size: 14px;
@@ -156,15 +155,15 @@ img {
         color: var(--logo-web-color);
 }
 
-.is-active {
+.underscore {
         position: relative;
         top: 30px;
         border-radius: 2px;
         background: var(--logo-web-color);
 }
 
-.is-active::after {
-        content: '';
+.underscore::after {
+        content: "";
         position: absolute;
         left: 0;
         top: 9px;
@@ -172,7 +171,6 @@ img {
         width: 53px;
         height: 4px;
         background-color: var(--logo-web-color);
-        visibility: hidden;
 }
 
 .contact-button {
@@ -333,11 +331,22 @@ img {
 }
 
 .what-we-do-1 {
-        background-image: url(//goit-markup-hw-05/images/img-1.jpg);
+        background-image: url(/goit-markup-hw-05/images/img-1.jpg);
         width: 370px;
         height: 294px;
 }
 
+.what-we-do-2 {
+        background-image: url(/goit-markup-hw-05/images/img-2.jpg);
+        width: 370px;
+        height: 294px;
+}
+
+.what-we-do-3 {
+        background-image: url(/goit-markup-hw-05/images/img-3.jpg);
+        width: 370px;
+        height: 294px;
+}
 .main-img-description {
         text-transform: uppercase;
         position: absolute;
@@ -349,6 +358,7 @@ img {
         justify-content: center;
         align-items: center;
         color: var(--primary-bg-color);
+        background-color: var(--what-we-do-shadow);
         font-size: 14px;
         font-weight: 700;
 }
@@ -414,8 +424,6 @@ img {
         position: relative;
         overflow: hidden;
 }
-
-
 
 .box-overlay{
         position: absolute;
