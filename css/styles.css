@@ -27,6 +27,7 @@
     --default-time: 250ms;
     --default-time-function: cubic-bezier(0.4, 0, 0.2, 1);
     --what-we-do-shadow: rgba(47, 48, 58, 0.8);
+    --background-overlay: #2196F3E5;
 }
 
 * {
@@ -164,6 +165,9 @@ img {
 
 .is-active::after {
         content: '';
+        position: absolute;
+        left: 0;
+        top: 9px;
         display: block;
         width: 53px;
         height: 4px;
@@ -318,16 +322,33 @@ img {
         gap: 30px;
 }
 
+.main-img {
+        position: relative;
+}
+
+.frame-what-we-do {
+        width: 370px;
+        height: 70px;
+        background: var(--what-we-do-shadow);
+}
+
+.what-we-do-1 {
+        background-image: url(//goit-markup-hw-05/images/img-1.jpg);
+        width: 370px;
+        height: 294px;
+}
+
 .main-img-description {
         text-transform: uppercase;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 100%;
         height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: var(--primary-bg-color);
-        background-color: var(--what-we-do-shadow);
         font-size: 14px;
         font-weight: 700;
 }
@@ -395,10 +416,6 @@ img {
 }
 
 
-.img-overlay:focus,
-.img-overlay:hover {
-        transform: translateY(0);
-}
 
 .box-overlay{
         position: absolute;
@@ -410,7 +427,7 @@ img {
         line-height: 1.56;
         letter-spacing: 0.03em;
         color: var(--primary-bg-color);
-        background-color: #2196F3E5;
+        background-color: var(--background-overlay);
         padding: 49px 45px 49px 24px;
         transform: translateY(100%);
         transition-duration: var(--default-time);
@@ -421,6 +438,11 @@ img {
 .card-set-item:focus{
         box-shadow: 0px 1px 1px var(--shadow-por-3), 0px 4px 4px var(--shadow-por-2), 1px 4px 6px var(--shadow-por-1);
 }
+
+.card-set-item:hover .box-overlay{
+        transform: translatey(0);
+}
+
 
 .border-photo {
         border: 1px solid #EEEEEE;
