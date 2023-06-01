@@ -247,6 +247,8 @@ img {
 .button-menu:focus,
 .button-menu:hover {
         box-shadow: 0px 4px 4px var(--shadow-main-button);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .rectangle {
@@ -401,6 +403,8 @@ img {
 .one-social-icon:focus {
         background-color: var(--logo-web-color);
         fill: var(--primary-bg-color);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .set-buttons,
@@ -445,6 +449,8 @@ img {
 .card-set-item:hover,
 .card-set-item:focus{
         box-shadow: 0px 1px 1px var(--shadow-por-3), 0px 4px 4px var(--shadow-por-2), 1px 4px 6px var(--shadow-por-1);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .card-set-item:hover .box-overlay{
@@ -527,6 +533,8 @@ img {
         color: var(--logo-web-color);
         fill: var(--logo-web-color);
         background-color: var(--primary-bg-color);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .rectangle2:focus, 
@@ -535,6 +543,8 @@ img {
         fill: var(--logo-web-color);
         background-color: var(--primary-bg-color);
         border-color: var(--logo-web-color);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 
@@ -577,6 +587,8 @@ img {
         color: var(--primary-bg-color);
         background-color: var(--logo-web-color);
         box-shadow: 0px 3px 1px var(--button-shadow-3), 0px 1px 2px var(--button-shadow-2), 0px 2px 2px var(--button-shadow-1);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 .buttons,
 .button-menu {
@@ -594,6 +606,8 @@ img {
 
 .address-footer a:hover {
         color: var(--logo-web-color);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 .last-section {
         background: #2f303a;
@@ -654,4 +668,39 @@ a:link {
         text-decoration: none;
         color: var(--primary-bg-color);
         font-style: normal;
+}
+.backdrop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--logo-web-color-2);
+}
+
+.modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 528px;
+        min-height: 581px;
+        background-color: var(--primary-bg-color);
+}
+.close-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background-color: var(--primary-bg-color);
+        border: 1px solid var(--logo-web-color-2);
+        border-radius: 50%;
+        cursor: pointer;
+}
+
+.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
 }
