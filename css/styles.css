@@ -184,6 +184,10 @@ img {
         color: var(--title-text-color);
         font-style: normal;
 }
+.contact-button-icons {
+        display: flex;
+        align-items: center;
+}
 
 .contact-button li:hover svg {
         fill: var(--logo-web-color);
