@@ -28,6 +28,7 @@
     --default-time-function: cubic-bezier(0.4, 0, 0.2, 1);
     --what-we-do-shadow: rgba(47, 48, 58, 0.8);
     --background-overlay: #2196F3E5;
+    --shadow-window: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -669,13 +670,16 @@ a:link {
         color: var(--primary-bg-color);
         font-style: normal;
 }
+
 .backdrop {
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--logo-web-color-2);
+        background-color: var(--shadow-window);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .modal {
@@ -686,6 +690,9 @@ a:link {
         width: 528px;
         min-height: 581px;
         background-color: var(--primary-bg-color);
+        box-shadow: 0px 1px 3px var(--shadow-img-3), 0px 1px 1px var(--shadow-img-2), 0px 2px 1px var(--shadow-img-1);
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 .close-button {
         position: absolute;
@@ -694,9 +701,11 @@ a:link {
         width: 30px;
         height: 30px;
         background-color: var(--primary-bg-color);
-        border: 1px solid var(--logo-web-color-2);
+        border: 1px solid var(--shadow-window);
         border-radius: 50%;
         cursor: pointer;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .is-hidden {
